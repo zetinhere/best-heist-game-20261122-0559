@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Meridian Vault — a museum heist</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #0b0e17;
+    color: #e8eaf2;
+    font-family: system-ui, -apple-system, sans-serif;
+    min-height: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    box-sizing: border-box;
+  }
+  h1 {
+    margin: 0;
+    font-size: 20px;
+    letter-spacing: 0.14em;
+    color: #f2c14e;
+  }
+  #wrap {
+    width: min(96vw, 960px);
+    aspect-ratio: 960 / 600;
+  }
+  canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: #171b28;
+    border: 1px solid #2e3550;
+    border-radius: 6px;
+    cursor: crosshair;
+  }
+  p.hint {
+    margin: 0;
+    font-size: 13px;
+    color: #9aa3bd;
+    text-align: center;
+  }
+  p.hint b { color: #e8eaf2; }
+</style>
+</head>
+<body>
+  <h1>THE MERIDIAN VAULT</h1>
+  <div id="wrap"><canvas id="game"></canvas></div>
+  <p class="hint"><b>WASD / arrows</b> move &nbsp;·&nbsp; <b>Shift</b> sneak &nbsp;·&nbsp; <b>E</b> (hold) lift loot &nbsp;·&nbsp; <b>Click</b> toss a coin &nbsp;·&nbsp; <b>Q</b> EMP the cameras &nbsp;·&nbsp; <b>R</b> retry a room</p>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
